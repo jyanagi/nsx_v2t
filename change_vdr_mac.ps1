@@ -11,7 +11,6 @@
     $Encoded = [System.Text.Encoding]::UTF8.GetBytes($auth)
     $EncodedPassword = [System.Convert]::ToBase64String($Encoded)
     $headers = @{"Authorization"="Basic $($EncodedPassword)"}
-    $oldmac = "02:50:56:56:44:52"
     $newmac = "02:50:56:56:44:62"
     $path = "https://$($nsxserver)/policy/api/v1/infra/global-config"
     #endregion
